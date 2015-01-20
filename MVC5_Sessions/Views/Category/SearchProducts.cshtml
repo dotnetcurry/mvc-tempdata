@@ -1,0 +1,27 @@
+﻿@model MVC5_Sessions.Models.Category
+
+@{
+    ViewBag.Title = "SearchProducts";
+}
+
+<h2>SearchProducts</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.EditorFor(cat=>cat.CategoryId);
+     
+         <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
